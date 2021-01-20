@@ -85,16 +85,107 @@ class _MyHomePageState extends State<MyHomePage> {
                 color: Colors.pink[50],
                 child: Stack(
                   children: [
-                    Container(
-                      margin: EdgeInsets.fromLTRB(16, 100, 16, 16),
-                      color: Colors.white,
+                    SingleChildScrollView(  //contains question and button
+                      child: Container(
+                        margin: EdgeInsets.fromLTRB(16, 100, 16, 16),
+                        padding: EdgeInsets.fromLTRB(16, 100, 16, 50),
+                        color: Colors.white,
+                        child: Column(
+                          children: [
+                            Padding(
+                              child: Text(
+                                "What would be the next number?",
+                                style: TextStyle(
+                                  fontSize: 18.0,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.pink
+                                ),
+                              ),
+                              padding: EdgeInsets.all(8.0),
+                            ),
+                            SizedBox(
+                              height: 20.0,
+                            ),
+                            Row(
+                              children: [
+                                Expanded(
+                                    child: Container(
+                                      height: 80,
+                                      child: Card(
+                                        elevation: 8,
+                                        child: Align(
+                                          alignment: Alignment.center,
+                                          child: Text(
+                                            "EVEN"
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  flex: 1,
+                                ),
+                                Expanded(
+                                  child: Container(
+                                    height: 80,
+                                    child: Card(
+                                      elevation: 8,
+                                      child: Align(
+                                        alignment: Alignment.center,
+                                        child: Text(
+                                          "ODD"
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                  flex: 1,
+                                ),
+                              ],
+                            ),
+                            SizedBox(
+                              height: 20,
+                            ),
+                            Container(
+                              height: 80,
+                              child: Card(
+                                color: Colors.teal,
+                                elevation: 8,
+                                child: Align(
+                                  alignment: Alignment.center,
+                                  child: Text(
+                                      "Retry Again",
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
                     ),
                     Align(
                       child: Container(
                         margin: EdgeInsets.fromLTRB(0, 50, 0, 0),
                         width: 200,
-                        height: 80,
-                        color: Colors.pink,
+                        height: 100,
+                        child: Card(
+                          elevation: 8.0,
+                          color: Colors.pink,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(16),
+                          ),
+                          child: Align(
+                            alignment: Alignment.center,
+                            child: Text(
+                              "????",
+                              style: TextStyle(
+                                fontSize: 32.0,
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        ),
                       ),
                       alignment: Alignment.topCenter,
                     )
